@@ -1,0 +1,11 @@
+:root {
+  /* PALETTE */
+  --background-color: #e0e7da;
+  --primary-color: #31493c;
+  --secondary-color: #b4182d;
+  --accent-color: #b3efb2;
+  --text-color: #e8f1f2;
+
+  /* FONTS */
+  --heading-font: "Libre Baskerville", serif;
+}

@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap");
+@import "variables.css";
+
+header {
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 4% 75% 6% 75%/75% 4% 72% 5%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 2em;
+  margin: 1em;
+  padding: 2em;
+  transform: rotate(-1deg);
+}
+
+h1,
+h2 {
+  color: var(--text-color);
+  font-family: var(--heading-font);
+}
+
+h2 {
+  border-bottom: 7px double;
+  color: var(--primary-color);
+  padding: 0.6em;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--heading-font);
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  letter-spacing: 0.1em;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+li {
+  background: url("../images/bug.png") no-repeat left center;
+  background-size: 20px;
+  list-style: none;
+  padding: 7px 0 7px 25px;
+}
+
+a {
+  box-shadow: 0px 2px 0px var(--secondary-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  box-shadow: 0px 2px 0px var(--primary-color);
+  color: var(--primary-color);
+}
+
+img {
+  box-shadow: rgba(100, 111, 75) 0px 0px 0px 3px;
+}
+
+#date {
+  color: var(--accent-color);
+}
+
+footer {
+  background-color: var(--primary-color);
+  border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+  color: var(--text-color);
+  font-size: 0.8rem;
+  margin: 0.5em;
+  padding: 0.5em;
+  text-align: center;
+}
