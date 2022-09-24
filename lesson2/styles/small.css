@@ -2,8 +2,8 @@
 
 :root {
   /* PALETTE */
-  --background-color: #963646;
-  --primary-color: #fff4eb;
+  --background-color: #217c6d;
+  --primary-color: #e8f1f0;
 
   /* FONTS */
   --heading-font: "Aref Ruqaa Ink", serif;
@@ -11,7 +11,7 @@
 }
 
 header {
-  background-color: var(--background-color);
+  background-image: linear-gradient(to right, #00b09b, #3b5249);
   padding: 0.2em 1em;
   text-align: center;
 }
@@ -49,7 +49,7 @@ img {
 }
 
 body {
-  font-family: "EB Garamond", serif;
+  font-family: var(--text-font);
   line-height: 1.5;
 }
 
