@@ -1,4 +1,4 @@
-@media only screen and (min-device-width: 600px) and (max-device-width: 834px) {
+@media only screen and (min-width: 600px) and (max-width: 834px) {
   h1 {
     font-size: 2em;
   }

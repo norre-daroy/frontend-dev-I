@@ -71,8 +71,8 @@ section div {
 }
 
 footer {
-  background-color: var(--background-color);
-  color: #fff;
+  background-color: #37594f;
+  color: var(--primary-color);
   padding: 1em;
   text-align: center;
 }
