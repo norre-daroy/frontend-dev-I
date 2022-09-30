@@ -20,6 +20,7 @@ h3 {
 
 h1 {
   color: var(--accent-color);
+  margin: 1em;
 }
 
 header div {
