@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter&family=Kanit:wght@700&display=swap");
+
+:root {
+  /* PALETTE */
+  --background-color: #ebf2e3;
+  --primary-color: #2b3825;
+  --secondary-color: #4f7344;
+  --accent-color: #fefceb;
+
+  /* FONTS */
+  --heading-font: "Kanit", sans-serif;
+  --text-font: "Bitter", serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font);
+}
+
+h1 {
+  color: var(--accent-color);
+  margin-left: 2em;
+}
+
+header div {
+  align-items: center;
+  background-color: #2b3825;
+  flex-direction: column;
+  display: flex;
+}
+
+img {
+  width: 150px;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 1em 0;
+}
+
+ul li {
+  margin: 0.5em;
+  text-transform: uppercase;
+}
+
+nav li a:active {
+  border-bottom: 5px double;
+}
+
+body {
+  font-family: var(--text-font);
+}
+
+p {
+  font-family: var(--text-font);
+  line-height: 1.4;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 5px double;
+}
+
+main {
+  background-color: var(--background-color);
+  padding: 2em;
+}
+
+table {
+  background-color: #fff;
+}
+
+th,
+td {
+  padding: 1em 2em;
+}
+
+.primary {
+  background: var(--primary-color);
+  color: var(--accent-color);
+}
+
+.secondary {
+  background: var(--secondary-color);
+  color: var(--accent-color);
+}
+
+.background {
+  background: var(--background-color);
+}
+
+.accent {
+  background: var(--accent-color);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+
+  padding: 0.5em;
+  text-align: center;
+}
