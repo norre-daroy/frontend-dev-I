@@ -3,6 +3,10 @@
     flex-direction: row;
   }
 
+  h1 {
+    margin-left: 2em;
+  }
+
   nav ul {
     flex-direction: row;
   }
