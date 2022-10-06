@@ -1,0 +1,67 @@
+@media only screen and (min-width: 64rem) {
+  .logoContainer img {
+    width: 80px;
+  }
+
+  .headings h1 {
+    font-size: 2.2rem;
+  }
+
+  .headings h2 {
+    font-size: 1.8rem;
+  }
+
+  .menuContainer {
+    flex-flow: row-reverse;
+    justify-content: space-around;
+  }
+
+  nav button {
+    display: none;
+  }
+
+  #primaryNav {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    position: inherit;
+  }
+
+  #primaryNav li a {
+    margin: 0 1em;
+  }
+
+  main {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .hero {
+    grid-area: 1 / 2 / span 2 / 2;
+  }
+
+  .event {
+    grid-column: 1/1;
+  }
+
+  .weather {
+    grid-area: 2 / 1 / 2 / 1;
+  }
+
+  .news {
+    grid-area: 3 / 2 / 3 / 2;
+  }
+
+  .spotlightContainer {
+    grid-area: 1 / start-line / last-line / 3;
+    flex-direction: column;
+  }
+
+  .join {
+    grid-area: 3 / 1 / last-line/ 1;
+  }
+
+  .footerContent1Container {
+    margin: 0 2em;
+  }
+}
