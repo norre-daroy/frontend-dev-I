@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bitter&family=Kanit:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Kanit:wght@700&display=swap');
 
 :root {
   /* PALETTE */
@@ -8,8 +8,8 @@
   --accent-color: #fefceb;
 
   /* FONTS */
-  --heading-font: "Kanit", sans-serif;
-  --text-font: "Bitter", serif;
+  --heading-font: 'Kanit', sans-serif;
+  --text-font: 'Bitter', serif;
 }
 
 h1,
@@ -101,6 +101,21 @@ header {
   border-bottom: none;
 }
 
+#banner {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border-radius: 4% 75% 6% 75%/75% 4% 72% 5%;
+  box-shadow: 3px 3px var(--primary-color), -1em 0 0.4em olive;
+  margin: 0.5em;
+  padding: 1em;
+  text-align: center;
+  transform: rotate(-1deg);
+}
+
+#bannerContainer {
+  align-self: center;
+}
+
 #currentDate {
   background-color: var(--secondary-color);
   color: var(--accent-color);
@@ -171,6 +186,10 @@ main {
 
 main div {
   background-color: var(--primary-color);
+}
+
+img {
+  width: 100%;
 }
 
 .spotlightContainer {

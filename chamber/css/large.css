@@ -20,6 +20,11 @@
     display: none;
   }
 
+  #banner {
+    font-size: larger;
+    padding: 1em 2em;
+  }
+
   #primaryNav {
     background-color: transparent;
     display: flex;
