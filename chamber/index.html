@@ -25,7 +25,7 @@
       <div class="headingContainer">
         <div class="logoContainer">
           <img
-            src="images/oshawa-chamber-logo.png"
+            src="images/oshawa-chamber-logo.webp"
             alt="logo for oshawa chamber of commerce"
           />
 
@@ -70,7 +70,20 @@
 
     <main>
       <div class="hero">
-        <img src="images/hero.jpg" alt="city view" />
+        <picture>
+          <source
+            srcset="images/wdd230-org-medium.jpg"
+            media="(min-width: 500px) and (max-width: 799px)"
+          />
+          <source
+            srcset="images/wdd230-org-large.jpg"
+            media="(min-width: 800px)"
+          />
+          <img
+            src="images/wdd230-org-small.jpg"
+            alt="people having a meeting"
+          />
+        </picture>
         <h2>Welcome to Oshawa</h2>
       </div>
       <div class="event">
@@ -134,7 +147,14 @@
       <div class="spotlightContainer">
         <div>
           <h4>Oshawa Happy Paws</h4>
-          <img class="spotlightImg" src="images/dog.jpg" alt="happy dog" />
+          <picture>
+            <source
+              srcset="images/dog-medium.jpg"
+              media="(min-width: 500px) and (max-width: 799px)"
+            />
+            <source srcset="images/dog-large.jpg" media="(min-width: 800px)" />
+            <img src="images/dog-small.jpg" alt="happy dog" />
+          </picture>
           <p>
             Quidem maxime expedita, ducimus eius minus! Nam dicta cum,
             asperiores inventore
@@ -146,20 +166,32 @@
           <h4>Harmony Public School</h4>
           <p>Enrollment starts soon. Visit website for registration.</p>
           <p>23 Harmony Rd. Oshawa, PGT E3R</p>
-          <img
-            class="spotlightImg"
-            src="images/school.jpg"
-            alt="school building"
-          />
+          <picture>
+            <source
+              srcset="images/school-medium.jpg"
+              media="(min-width: 500px) and (max-width: 799px)"
+            />
+            <source
+              srcset="images/school-large.jpg"
+              media="(min-width: 800px)"
+            />
+            <img src="images/school-small.jpg" alt="school building" />
+          </picture>
         </div>
         <div>
           <h4>Weekend Farmers Market</h4>
           <p>Come visit us this weekend!</p>
-          <img
-            class="spotlightImg"
-            src="images/market.jpg"
-            alt="a market with vegetables"
-          />
+          <picture>
+            <source
+              srcset="images/market-medium.jpg"
+              media="(min-width: 500px) and (max-width: 799px)"
+            />
+            <source
+              srcset="images/market-large.jpg"
+              media="(min-width: 800px)"
+            />
+            <img src="images/market-small.jpg" alt="a market with vegetables" />
+          </picture>
           <p>
             Nisi reprehenderit natus numquam illum possimus molestiae? Nam
             magnam illo beatae dicta cum, asperiores inventore. Nam magnam illo
@@ -183,7 +215,7 @@
       <div class="footerContent1Container">
         <div class="footerContent">
           <img
-            src="images/oshawa-chamber-logo.png"
+            src="images/oshawa-chamber-logo.webp"
             alt="logo for oshawa chamber of commerce"
           />
           <div>
