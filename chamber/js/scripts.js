@@ -17,12 +17,12 @@ menuButton.onclick = toggleMenu;
 const currDate = new Date();
 dayOfWeek = currDate.getDay();
 
-if (dayOfWeek === 1 && dayOfWeek === 2) {
-  const banner = document.createElement('p');
-  banner.id = 'banner';
-  banner.innerHTML =
-    '🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00p.m.';
-  document.getElementById('bannerContainer').append(banner);
+if (dayOfWeek === 1 || dayOfWeek === 2) {
+const banner = document.createElement('p');
+banner.id = 'banner';
+banner.innerHTML =
+  '🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00p.m.';
+document.getElementById('bannerContainer').append(banner);
 }
 
 // Last modified

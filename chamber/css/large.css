@@ -42,19 +42,19 @@
   }
 
   .hero {
-    grid-area: 1 / 2 / span 2 / 2;
+    grid-area: 1 / 2 / 2 / 2;
+  }
+
+  .hero h2 {
+    font-size: 4rem;
   }
 
   .event {
-    grid-column: 1/1;
-  }
-
-  .weather {
-    grid-area: 2 / 1 / 2 / 1;
+    grid-column: 1;
   }
 
   .news {
-    grid-area: 3 / 2 / 3 / 2;
+    grid-area: 2 / 1 / 2 / 3;
   }
 
   .spotlightContainer {

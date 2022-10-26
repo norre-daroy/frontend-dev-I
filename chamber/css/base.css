@@ -14,7 +14,8 @@
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: var(--accent-color);
   font-family: var(--heading-font);
 }
@@ -179,28 +180,72 @@ a:active {
 
 main {
   background-color: var(--background-color);
-  display: grid;
-  gap: 1em;
-  padding: 2em;
+  padding: 0.5em;
 }
 
 main div {
   background-color: var(--primary-color);
+  margin: 1em;
 }
 
 img {
   width: 100%;
 }
 
+button {
+  padding: 10px 15px;
+  width: 100%;
+}
+
 .spotlightContainer {
-  background-color: var(--primary-color);
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   padding: 1em;
 }
 
 .spotlightContainer div {
   background-color: var(--secondary-color);
+}
+
+.news,
+.join,
+.event,
+.weather,
+.spotlight {
+  padding: 1em;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero h2 {
+  bottom: 0;
+  left: 20px;
+  position: absolute;
+}
+
+.news span {
+  color: #c9d2be;
+  font-size: small;
+  font-weight: 100;
+}
+
+.spotlightContainer div,
+.join div {
+  margin: 1em;
+  padding: 1em;
+}
+
+.spotlightImg {
+  width: 100%;
+}
+
+.event div {
+  border: 1px solid white;
+  margin: 1em 0.5em;
+  padding: 10px;
 }
 
 /* FOOTER */
