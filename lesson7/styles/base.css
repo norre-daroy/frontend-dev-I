@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(164, 237, 214);
+  text-align: center;
+}
+
+picture {
+  display: block;
+  margin-top: 3rem;
+}
+
+picture img[data-src] {
+  filter: blur(0.2em);
+}
+
+picture img {
+  filter: blur(0em);
+  transition: filter 0.5s;
+}

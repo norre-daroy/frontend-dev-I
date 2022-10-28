@@ -11,31 +11,63 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
-    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="styles/base.css" />
   </head>
 
   <body>
     <h1>Progressive Loading of Images</h1>
     <main>
       <picture>
-        <img src="https://picsum.photos/300/400?img=a" alt="Random image" />
+        <img
+          src="./images/placeholder.png"
+          data-src="https://picsum.photos/300/400?img=a"
+          loading="lazy"
+          alt="Random image"
+        />
       </picture>
       <picture>
-        <img src="https://picsum.photos/300/400?img=b" alt="Random image" />
+        <img
+          src="./images/placeholder.png"
+          data-src="https://picsum.photos/300/400?img=b"
+          loading="lazy"
+          alt="Random image"
+        />
       </picture>
       <picture>
-        <img src="https://picsum.photos/300/400?img=c" alt="Random image" />
+        <img
+          src="./images/placeholder.png"
+          data-src="https://picsum.photos/300/400?img=c"
+          loading="lazy"
+          alt="Random image"
+        />
       </picture>
       <picture>
-        <img src="https://picsum.photos/300/400?img=d" alt="Random image" />
+        <img
+          src="https://picsum.photos/300/400?img=d"
+          alt="Random image"
+          src="./images/placeholder.png"
+          data-src="https://picsum.photos/300/400?img=d"
+          loading="lazy"
+          alt="Random image"
+        />
       </picture>
       <picture>
-        <img src="https://picsum.photos/300/400?img=e" alt="Random image" />
+        <img
+          src="./images/placeholder.png"
+          data-src="https://picsum.photos/300/400?img=e"
+          loading="lazy"
+          alt="Random image"
+        />
       </picture>
       <picture>
-        <img src="https://picsum.photos/300/400?img=f" alt="Random image" />
+        <img
+          src="./images/placeholder.png"
+          data-src="https://picsum.photos/300/400?img=f"
+          loading="lazy"
+          alt="Random image"
+        />
       </picture>
     </main>
-    <script src="script.js"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
