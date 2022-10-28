@@ -1,18 +1,24 @@
 body {
-  background-color: rgb(191, 221, 210);
-  text-align: center;
-}
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(228, 227, 226);
+  }
 
-picture {
-  display: block;
-  margin-top: 3em;
-}
-
-picture img[data-src] {
-  filter: blur(0.2em);
-}
-
-picture img {
-  filter: blur(0em);
-  transition: filter 0.7s;
-}
+  h1{
+    color: rgb(90, 61, 61);
+  }
+  
+  picture {
+    display: block;
+    padding-top: 3rem;
+  }
+  
+  picture img[data-src] {
+    filter: blur(0.2em);
+  }
+  
+  picture img {
+    filter: blur(0em);
+    transition: filter 0.5s;
+  }
