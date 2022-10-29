@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Discover</title>
+    <meta
+      name="description"
+      content="Chamber of commerce site for the city of Oshawa"
+    />
+    <meta name="keywords" content="Chamber, commerce, Oshawa, business" />
+    <meta name="author" content="Norre Daroy" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/medium.css" />
+    <link rel="stylesheet" href="css/large.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="headingContainer">
+        <div class="logoContainer">
+          <img
+            src="images/oshawa-chamber-logo.webp"
+            alt="logo for oshawa chamber of commerce"
+          />
+
+          <div class="headings">
+            <h1>Oshawa</h1>
+            <h2>Chamber of Commerce</h2>
+          </div>
+        </div>
+        <div class="menuContainer">
+          <div class="social">
+            <a href="https://www.facebook.com" target="_blank"
+              ><img src="images/icon-facebook.svg" alt="facebook logo"
+            /></a>
+            <a href="https://www.linkedin.com" target="_blank"
+              ><img src="images/icon-linkedin.svg" alt="linkedin logo"
+            /></a>
+          </div>
+          <nav>
+            <button id="hamburgerBtn">
+              <span>&#9776;</span><span>X</span>
+            </button>
+            <ul id="primaryNav">
+              <li>
+                <a href="https://norre-daroy.github.io/wdd230/chamber/">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/discover.html"> Discover </a>
+              </li>
+              <li>
+                <a href="/"> Directory </a>
+              </li>
+              <li>
+                <a href="/"> Join </a>
+              </li>
+              <li>
+                <a href="/"> Contact </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id="bannerContainer"></div>
+      <div id="currentDate"></div>
+    </header>
+
+    <main class="discover">
+      <div>
+        <h1>Discover Oshawa</h1>
+        <div class="stats">
+          <h2>Demographic Data 2020</h2>
+          <h3>Population</h3>
+          <p>178,893</p>
+          <h3>Median Household Income</h3>
+          <p>$70,211</p>
+          <h3>Median after-tax household Income</h3>
+          <p>$61,873</p>
+          <h3>
+            The majority of Oshawa residents (that’s 97.3%) speak English.
+          </h3>
+        </div>
+        <div class="discoverContainer">
+          <section>
+            <h2>Oshawa Community Church</h2>
+            <picture>
+              <img
+                src="./images/placeholder.png"
+                data-src="./images/church.webp"
+                loading="lazy"
+                alt="Church building with trees"
+              />
+              <p>
+                We are the church located in the city of Oshawa. We are a
+                community where all are welcome, come worship with us!
+              </p>
+            </picture>
+          </section>
+
+          <section>
+            <h2>Oshawa Nature Park</h2>
+            <picture>
+              <img
+                src="./images/placeholder.png"
+                data-src="./images/parks.webp"
+                loading="lazy"
+                alt="A path with trees"
+              />
+            </picture>
+            <p>
+              In addition to our many parks and green spaces, the City is home
+              to several valauble natural areas. Stay on designated recreational
+              trails.
+            </p>
+          </section>
+
+          <section>
+            <h2>Durham Train Station</h2>
+            <picture>
+              <img
+                src="./images/placeholder.png"
+                data-src="./images/train.webp"
+                loading="lazy"
+                alt="Train arriving at the station"
+              />
+            </picture>
+            <p>
+              Train service between Oshawa and other cities and town has never
+              been faster, easier, or more affordable!. To find the closest
+              station, use the search engine or consult the list of stations.
+            </p>
+          </section>
+
+          <section>
+            <h2>Lakeview Hospital</h2>
+            <picture>
+              <img
+                src="./images/placeholder.png"
+                data-src="./images/hospital.webp"
+                loading="lazy"
+                alt="Hospital building"
+              />
+            </picture>
+            <p>
+              Lakeview Hospital is a 250 plus hospital bed community hospital.
+              We are dedicated to providing the quality of healthcare we want
+              our closest loved ones to receive. The emergency unit is open 24
+              hours.
+            </p>
+          </section>
+
+          <section>
+            <h2>Algonquin Provincial Park</h2>
+            <picture>
+              <img
+                src="./images/placeholder.png"
+                data-src="./images/camping.webp"
+                loading="lazy"
+                alt="Camping tents overlooking the lake"
+              />
+            </picture>
+            <p>
+              The park has more than 1000 campsites, including diversified
+              accomodations to suit every taste and comfort level. Just 30
+              minutes from downtown, experience the best camping site here.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footerContent1Container">
+        <div class="footerContent">
+          <img
+            src="images/oshawa-chamber-logo.webp"
+            alt="logo for oshawa chamber of commerce"
+          />
+          <div>
+            <h3>Oshawa Chamber of Commerce</h3>
+            <p>17 Ontario St. Oshawa, Canada</p>
+          </div>
+        </div>
+        <div>
+          <p>theoshawachamber.org</p>
+          <p>+1 (905) 345-1200</p>
+        </div>
+      </div>
+      <div class="footerContent2Container">
+        <p>&copy; <span id="year"></span> Oshawa Chamber</p>
+        <p>Norre Daroy</p>
+        <p>WDD 230 Project</p>
+        <p id="date"></p>
+      </div>
+    </footer>
+
+    <script src="js/discover.js"></script>
+  </body>
+</html>

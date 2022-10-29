@@ -183,7 +183,7 @@ main {
   padding: 0.5em;
 }
 
-main div {
+.home div {
   background-color: var(--primary-color);
   margin: 1em;
 }
@@ -246,6 +246,67 @@ button {
   border: 1px solid white;
   margin: 1em 0.5em;
   padding: 10px;
+}
+
+#lastVisit {
+  padding: 0.2em;
+}
+
+.lastVisitContainer {
+  padding: 0.2em;
+}
+
+.lastVisitContainer h3 {
+  color: var(--accent-color);
+}
+
+/* DISCOVER */
+.discover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.discover div {
+  margin: 0 auto;
+}
+
+.discoverContainer section {
+  background-color: var(--primary-color);
+  margin-bottom: 2em;
+  margin-top: 2em;
+  padding: 1em;
+}
+
+.discover h1,
+.stats h2,
+.stats h3,
+.stats p {
+  color: var(--primary-color);
+}
+
+.stats {
+  border: 2px solid var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  padding: 0.3em;
+  text-align: left;
+}
+
+picture {
+  display: block;
+  margin-top: 3rem;
+}
+
+picture img[data-src] {
+  filter: blur(0.2em);
+}
+
+picture img {
+  filter: blur(0em);
+  transition: filter 0.5s;
 }
 
 /* FOOTER */
