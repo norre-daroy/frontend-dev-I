@@ -18,7 +18,6 @@ div {
 table {
   border-collapse: collapse;
   border: 2px solid rgb(200, 200, 200);
-  caption-side: bottom;
   letter-spacing: 1px;
   font-size: 0.8rem;
   width: 100%;
@@ -52,6 +51,7 @@ tr:nth-child(odd) td {
 }
 
 caption {
+  caption-side: bottom;
   color: green;
   padding: 10px;
 }
