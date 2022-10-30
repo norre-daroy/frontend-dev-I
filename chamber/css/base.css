@@ -261,7 +261,9 @@ button {
 }
 
 /* DISCOVER */
-.discover {
+.discover,
+.joinContainer,
+.thankYouContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -282,11 +284,16 @@ button {
 .discover h1,
 .stats h2,
 .stats h3,
-.stats p {
+.stats p,
+.joinContainer h1,
+.membership h2,
+.membership h3,
+.membership p {
   color: var(--primary-color);
 }
 
-.stats {
+.stats,
+.membership {
   border: 2px solid var(--primary-color);
   display: flex;
   flex-direction: column;
@@ -307,6 +314,69 @@ picture img[data-src] {
 picture img {
   filter: blur(0em);
   transition: filter 0.5s;
+}
+
+.joinContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.joinContainer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#joinUs {
+  align-self: center;
+  background-color: var(--primary-color);
+  padding: 2em;
+  text-align: left;
+}
+input,
+select,
+textArea {
+  background-color: var(--accent-color);
+  border-radius: 6px;
+  border: 0;
+  box-sizing: border-box;
+  color: var(--primary-color);
+  font-size: 18px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+label {
+  color: var(--accent-color);
+}
+
+.submit {
+  background-color: var(--secondary-color);
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/* THANK YOU  */
+.thankYouContainer {
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 50vh;
+}
+
+.thankYou h1,
+.thankYou p {
+  color: var(--primary-color);
 }
 
 /* FOOTER */

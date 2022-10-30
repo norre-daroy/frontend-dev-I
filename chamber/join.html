@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Oshawa Chamber</title>
+    <meta
+      name="description"
+      content="Chamber of commerce site for the city of Oshawa"
+    />
+    <meta name="keywords" content="Chamber, commerce, Oshawa, business" />
+    <meta name="author" content="Norre Daroy" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/medium.css" />
+    <link rel="stylesheet" href="css/large.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="headingContainer">
+        <div class="logoContainer">
+          <img
+            src="images/oshawa-chamber-logo.webp"
+            alt="logo for oshawa chamber of commerce"
+          />
+
+          <div class="headings">
+            <h1>Oshawa</h1>
+            <h2>Chamber of Commerce</h2>
+          </div>
+        </div>
+        <div class="menuContainer">
+          <div class="social">
+            <a href="https://www.facebook.com" target="_blank"
+              ><img src="images/icon-facebook.svg" alt="facebook logo"
+            /></a>
+            <a href="https://www.linkedin.com" target="_blank"
+              ><img src="images/icon-linkedin.svg" alt="linkedin logo"
+            /></a>
+          </div>
+          <nav>
+            <button id="hamburgerBtn">
+              <span>&#9776;</span><span>X</span>
+            </button>
+            <ul id="primaryNav">
+              <li>
+                <a
+                  href="https://norre-daroy.github.io/wdd230/chamber/discover.html"
+                >
+                  Discover
+                </a>
+              </li>
+              <li>
+                <a href="/"> Directory </a>
+              </li>
+              <li>
+                <a href="/"> Join </a>
+              </li>
+              <li>
+                <a href="/"> Contact </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id="bannerContainer"></div>
+      <div id="currentDate"></div>
+    </header>
+
+    <main class="joinContainer">
+      <h1>Sign up to join</h1>
+      <div>
+        <div class="membership">
+          <h2>Membership Levels</h2>
+          <ul>
+            <li>
+              <h3>NP Membership</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio inventore laborum consequatur nobis, commodi enim
+                repudiandae! Saepe repudiandae laborum suscipit quis. Vitae
+                dicta in, sequi perspiciatis ullam vel maxime adipisci.
+              </p>
+            </li>
+            <li>
+              <h3>Bronze Membership</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio inventore laborum consequatur nobis, commodi enim
+                repudiandae! Saepe repudiandae laborum suscipit quis. Vitae
+                dicta in, sequi perspiciatis ullam vel maxime adipisci.
+              </p>
+            </li>
+            <li>
+              <h3>Silver Membership</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio inventore laborum consequatur nobis, commodi enim
+                repudiandae! Saepe repudiandae laborum suscipit quis. Vitae
+                dicta in, sequi perspiciatis ullam vel maxime adipisci.
+              </p>
+            </li>
+            <li>
+              <h3>Gold Membership</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio inventore laborum consequatur nobis, commodi enim
+                repudiandae! Saepe repudiandae laborum suscipit quis. Vitae
+                dicta in, sequi perspiciatis ullam vel maxime adipisci.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <form id="joinUs" action="./thankYou.html" method="get">
+          <label for="fname">First name</label><br />
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            autofocus
+            required
+          /><br /><br />
+          <label for="lname">Last name:</label><br />
+          <input type="text" id="lname" name="lname" required /><br /><br />
+
+          <label for="busname">Business position title</label><br />
+          <input
+            type="text"
+            id="busname"
+            name="busname"
+            pattern="[a-zA-Z -]{7,}"
+          /><br /><br />
+
+          <label for="email">Email</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+          /><br /><br />
+
+          <label for="phone">Phone number:</label>
+          <input type="tel" id="phone" name="phone" required /><br /><br />
+
+          <label for="bustitle">Business name:</label>
+          <input
+            type="tel"
+            id="bustitle"
+            name="bustitle"
+            required
+          /><br /><br />
+
+          <label for="membership">Choose membership level:</label>
+          <select name="membership" id="membership">
+            <option value="" disabled selected>Select your option</option>
+            <option value="np">NP Membership</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option></select
+          ><br /><br />
+
+          <label for="busdesc">Business Description:</label>
+          <textarea
+            id="busdesc"
+            name="busdesc"
+            rows="4"
+            placeholder="Type your description here"
+          ></textarea
+          ><br /><br />
+          <input type="hidden" id="dateTime" name="dateTime" value="" />
+          <input class="submit" type="submit" value="Submit" />
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footerContent1Container">
+        <div class="footerContent">
+          <img
+            src="images/oshawa-chamber-logo.webp"
+            alt="logo for oshawa chamber of commerce"
+          />
+          <div>
+            <h3>Oshawa Chamber of Commerce</h3>
+            <p>17 Ontario St. Oshawa, Canada</p>
+          </div>
+        </div>
+        <div>
+          <p>theoshawachamber.org</p>
+          <p>+1 (905) 345-1200</p>
+        </div>
+      </div>
+      <div class="footerContent2Container">
+        <p>&copy; <span id="year"></span> Oshawa Chamber</p>
+        <p>Norre Daroy</p>
+        <p>WDD 230 Project</p>
+        <p id="date"></p>
+      </div>
+    </footer>
+    <script src="js/scripts.js/"></script>
+  </body>
+</html>

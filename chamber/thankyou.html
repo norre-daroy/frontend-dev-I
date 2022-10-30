@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Oshawa Chamber</title>
+    <meta
+      name="description"
+      content="Chamber of commerce site for the city of Oshawa"
+    />
+    <meta name="keywords" content="Chamber, commerce, Oshawa, business" />
+    <meta name="author" content="Norre Daroy" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/medium.css" />
+    <link rel="stylesheet" href="css/large.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="headingContainer">
+        <div class="logoContainer">
+          <img
+            src="images/oshawa-chamber-logo.webp"
+            alt="logo for oshawa chamber of commerce"
+          />
+
+          <div class="headings">
+            <h1>Oshawa</h1>
+            <h2>Chamber of Commerce</h2>
+          </div>
+        </div>
+        <div class="menuContainer">
+          <div class="social">
+            <a href="https://www.facebook.com" target="_blank"
+              ><img src="images/icon-facebook.svg" alt="facebook logo"
+            /></a>
+            <a href="https://www.linkedin.com" target="_blank"
+              ><img src="images/icon-linkedin.svg" alt="linkedin logo"
+            /></a>
+          </div>
+          <nav>
+            <button id="hamburgerBtn">
+              <span>&#9776;</span><span>X</span>
+            </button>
+            <ul id="primaryNav">
+              <li>
+                <a href="https://norre-daroy.github.io/wdd230/chamber/">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://norre-daroy.github.io/wdd230/chamber/discover.html"
+                >
+                  Discover
+                </a>
+              </li>
+              <li>
+                <a href="/"> Directory </a>
+              </li>
+              <li>
+                <a href="/"> Join </a>
+              </li>
+              <li>
+                <a href="/"> Contact </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id="bannerContainer"></div>
+      <div id="currentDate"></div>
+    </header>
+
+    <main class="thankYouContainer">
+      <div class="thankYou">
+        <h1>Thank you!</h1>
+        <p>
+          Thank you for taking the time to fill up the form. We will review your
+          details and get back to you as soon as possible.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footerContent1Container">
+        <div class="footerContent">
+          <img
+            src="images/oshawa-chamber-logo.webp"
+            alt="logo for oshawa chamber of commerce"
+          />
+          <div>
+            <h3>Oshawa Chamber of Commerce</h3>
+            <p>17 Ontario St. Oshawa, Canada</p>
+          </div>
+        </div>
+        <div>
+          <p>theoshawachamber.org</p>
+          <p>+1 (905) 345-1200</p>
+        </div>
+      </div>
+      <div class="footerContent2Container">
+        <p>&copy; <span id="year"></span> Oshawa Chamber</p>
+        <p>Norre Daroy</p>
+        <p>WDD 230 Project</p>
+        <p id="date"></p>
+      </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/windchill.js"></script>
+  </body>
+</html>

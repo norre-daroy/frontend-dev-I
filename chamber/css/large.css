@@ -66,6 +66,18 @@
     grid-area: 3 / 1 / last-line/ 1;
   }
 
+  #joinUs {
+    width: 40%;
+  }
+
+  .joinContainer div {
+    flex-direction: row;
+  }
+
+  .membership {
+    width: 50%;
+  }
+
   .footerContent1Container {
     margin: 0 2em;
   }

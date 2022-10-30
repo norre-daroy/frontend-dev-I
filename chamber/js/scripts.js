@@ -36,6 +36,10 @@ function toggleMenu() {
 const menuButton = document.getElementById('hamburgerBtn');
 menuButton.onclick = toggleMenu;
 
+document.getElementById('join').onclick = function () {
+  location.href = 'https://norre-daroy.github.io/wdd230/chamber/join.html';
+};
+
 //Date
 const currDate = new Date();
 dayOfWeek = currDate.getDay();

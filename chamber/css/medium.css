@@ -68,6 +68,10 @@
     width: 60%;
   }
 
+  #joinUs {
+    width: 50%;
+  }
+
   .footerContent1Container {
     flex-direction: row;
   }
