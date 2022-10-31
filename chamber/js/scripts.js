@@ -6,10 +6,10 @@ const currentDate = new Intl.DateTimeFormat('en-UK', {
 window.localStorage.setItem('lastVisit', currentDate);
 
 // // Retrieve last visit date from local storage
-const lastVisit = localStorage.getItem('lastVisit');
+const lastVisitDate = localStorage.getItem('lastVisit');
 
 const date1 = new Date();
-const date2 = new Date(lastVisit);
+const date2 = new Date(lastVisitDate);
 
 // // Calculate days between last visit
 const days = (date1, date2) => {
@@ -24,21 +24,31 @@ const daysLastVisitText = () => {
 };
 
 const displayLastVisit = daysLastVisitText();
-document.querySelector('#lastVisit').innerHTML = displayLastVisit;
-document.querySelector('#currentDate').innerHTML = currentDate;
+
+const lastVisitSelector = document.querySelector('#lastVisit');
+if (lastVisitSelector) lastVisitSelector.innerHTML = displayLastVisit;
+
+const currentDateSelector = document.querySelector('#currentDate');
+if (currentDateSelector) currentDateSelector.innerHTML = currentDate;
 
 // Hamburger button toggle menu
 function toggleMenu() {
-  document.getElementById('primaryNav').classList.toggle('open');
-  document.getElementById('hamburgerBtn').classList.toggle('open');
+  const primaryNavElement = document.getElementById('primaryNav');
+  if (primaryNavElement) primaryNavElement.classList.toggle('open');
+
+  const hamburgerBtnElement = document.getElementById('hamburgerBtn');
+  if (hamburgerBtnElement) hamburgerBtnElement.classList.toggle('open');
 }
 
 const menuButton = document.getElementById('hamburgerBtn');
-menuButton.onclick = toggleMenu;
+if (menuButton) menuButton.onclick = toggleMenu;
 
-document.getElementById('join').onclick = function () {
-  location.href = 'https://norre-daroy.github.io/wdd230/chamber/join.html';
-};
+const joinElement = document.getElementById('join');
+if (joinElement) {
+  joinElement.onclick = function () {
+    location.href = 'https://norre-daroy.github.io/wdd230/chamber/join.html';
+  };
+}
 
 //Date
 const currDate = new Date();
@@ -56,5 +66,39 @@ if (dayOfWeek === 1 || dayOfWeek === 2) {
 const dateTimeLastModified = `Last modification: ${document.lastModified}`;
 const year = new Date(document.lastModified).getFullYear();
 
-document.querySelector('#year').innerHTML = year;
-document.querySelector('#date').innerHTML = dateTimeLastModified;
+const yearSelector = document.querySelector('#year');
+if (yearSelector) yearSelector.innerHTML = year;
+
+const dateSelector = document.querySelector('#date');
+if (dateSelector) dateSelector.innerHTML = dateTimeLastModified;
+
+// Lazy loading images
+const imagesToLoad = document.querySelectorAll('img[data-src]');
+
+const loadImages = (image) => {
+  image.setAttribute('src', image.getAttribute('data-src'));
+  image.onload = () => {
+    image.removeAttribute('data-src');
+  };
+};
+
+const imgOptions = {
+  threshold: 0.5,
+  rootMargin: '0px 0px 50px 0px',
+};
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(
+    (items, observer) =>
+      items.forEach((item) => {
+        if (item.isIntersecting) {
+          loadImages(item.target);
+          observer.unobserve(item.target);
+        }
+      }),
+    imgOptions
+  );
+  imagesToLoad.forEach((img) => observer.observe(img));
+} else {
+  imagesToLoad.forEach((img) => loadImages(img));
+}
