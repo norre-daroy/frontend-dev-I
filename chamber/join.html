@@ -122,6 +122,7 @@
         </div>
         <form
           id="joinUs"
+          name="joinUs"
           action="https://norre-daroy.github.io/wdd230/chamber/thankyou.html"
           method="get"
         >
@@ -142,7 +143,10 @@
             id="busname"
             name="busname"
             pattern="[a-zA-Z -]{7,}"
-          /><br /><br />
+          /><small
+            >Accepts only alpha characters, hyphens, with at least 7
+            characters.</small
+          ><br /><br />
 
           <label for="email">Email</label><br />
           <input

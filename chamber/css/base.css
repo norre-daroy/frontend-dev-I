@@ -346,7 +346,8 @@ textArea {
   width: 100%;
 }
 
-label {
+label,
+small {
   color: var(--accent-color);
 }
 

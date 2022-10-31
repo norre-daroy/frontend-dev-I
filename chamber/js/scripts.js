@@ -50,6 +50,10 @@ if (joinElement) {
   };
 }
 
+//Value of hidden input
+const inputDateTimeSelector = document.getElementById('dateTime');
+if (inputDateTimeSelector) inputDateTimeSelector.value = new Date();
+
 //Date
 const currDate = new Date();
 dayOfWeek = currDate.getDay();
