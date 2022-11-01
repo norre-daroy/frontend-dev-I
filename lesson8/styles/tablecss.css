@@ -43,11 +43,15 @@ td {
 }
 
 tr:nth-child(even) td {
-  background-color: rgb(214, 224, 178);
+  background-color: rgb(235, 240, 216);
 }
 
 tr:nth-child(odd) td {
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(240, 242, 241);
+}
+
+tr:nth-child(2) td:nth-child(2) {
+  background-color: rgb(202, 235, 105);
 }
 
 caption {
@@ -56,8 +60,8 @@ caption {
   padding: 10px;
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 64em) {
   div {
-    width: 50%;
+    width: 40%;
   }
 }
