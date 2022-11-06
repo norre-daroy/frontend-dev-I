@@ -262,6 +262,7 @@ button {
 
 /* DISCOVER */
 .discover,
+.directory,
 .joinContainer,
 .thankYouContainer {
   display: flex;
@@ -282,6 +283,7 @@ button {
 }
 
 .discover h1,
+.directory h1,
 .stats h2,
 .stats h3,
 .stats p,
@@ -378,6 +380,81 @@ small {
 .thankYou h1,
 .thankYou p {
   color: var(--primary-color);
+}
+
+/* DIRECTORY */
+.directory {
+  padding-bottom: 5em;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.grid section,
+.list section {
+  background: var(--secondary-color);
+  border: 0.55em solid var(--primary-color);
+  box-shadow: 0 1.5em 2.5em -0.5em;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.grid section p,
+.list section p {
+  text-align: left;
+}
+
+.grid section a,
+.list section a {
+  color: rgb(216, 216, 226);
+  display: block;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.grid img,
+.list img {
+  width: auto;
+  box-shadow: 0 0 30px#716f6a;
+}
+
+.menu {
+  margin: 1rem auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 3em;
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+.menu p {
+  color: var(--accent-color);
+}
+
+.menu button {
+  margin: 0 10px;
+  padding: 1em 3em;
+}
+
+.menu div {
+  display: flex;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.list section img {
+  display: none;
 }
 
 /* FOOTER */

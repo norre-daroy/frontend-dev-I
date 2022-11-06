@@ -78,6 +78,10 @@
     width: 50%;
   }
 
+  .list section img {
+    display: block;
+  }
+
   .footerContent1Container {
     margin: 0 2em;
   }

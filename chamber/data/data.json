@@ -1,0 +1,94 @@
+{
+  "directory": [
+    {
+      "name": "Vanguard Pet",
+      "address": "34 Burrows St., Oshawa",
+      "phoneNumber": "647-2345-5432",
+      "website": "https://www.vanguard-pet.com",
+      "imgUrl": "images/pet.webp",
+      "membershipLevel": "gold"
+    },
+    {
+      "name": "GreenApple Business",
+      "address": "34 Burrows St., Oshawa",
+      "phoneNumber": "647-2345-5432",
+      "website": "https://www.greenapple.org",
+      "imgUrl": "images/greenapple.webp",
+      "membershipLevel": "bronze"
+    },
+
+    {
+      "name": "Countrywide Bike Parts",
+      "address": "34 Burrows St., Oshawa",
+      "phoneNumber": "647-2345-5432",
+      "website": "https://www.countrywide.io",
+      "imgUrl": "images/bike.webp",
+      "membershipLevel": "gold"
+    },
+    {
+      "name": "Stonewall Post Services",
+      "address": "34 Burrows St., Oshawa",
+      "phoneNumber": "647-2345-5432",
+      "website": "https://www.stonewall.io",
+      "imgUrl": "images/post.webp",
+      "membershipLevel": "bronze"
+    },
+    {
+      "name": "Phoenix Business",
+      "address": "34 Burrows St., Oshawa",
+      "phoneNumber": "647-2345-5432",
+      "website": "https://www.phoenixbusiness.org",
+      "imgUrl": "images/phoenix.webp",
+      "membershipLevel": "gold"
+    },
+    {
+      "name": "Striking Basket",
+      "address": "34 Burrows St., Oshawa",
+      "phoneNumber": "647-2345-5432",
+      "website": "https://www.strikingbasket.org",
+      "imgUrl": "images/basket.webp",
+
+      "membershipLevel": "silver"
+    },
+    {
+      "name": "Laundry Meta",
+      "address": "34 Burrows St., Oshawa",
+      "phoneNumber": "647-2345-5432",
+      "website": "https://www.laundry.com",
+      "imgUrl": "images/laundry.webp",
+      "membershipLevel": "bronze"
+    },
+    {
+      "name": "Spectra Group",
+      "address": "34 Burrows St., Oshawa",
+      "phoneNumber": "647-2345-5432",
+      "website": "https://www.spectragroup.org",
+      "imgUrl": "images/spectra.webp",
+      "membershipLevel": "gold"
+    },
+    {
+      "name": "Nail Strings",
+      "address": "34 Burrows St., Oshawa",
+      "phoneNumber": "647-2345-5432",
+      "website": "https://www.nailstrings.org",
+      "imgUrl": "images/nail.webp",
+      "membershipLevel": "silver"
+    },
+    {
+      "name": "Gateway Vortex",
+      "address": "34 Burrows St., Oshawa",
+      "phoneNumber": "647-2345-5432",
+      "website": "https://www.gatewayvortex.org",
+      "imgUrl": "images/gateway.webp",
+      "membershipLevel": "np"
+    },
+    {
+      "name": "Revive Business Growth",
+      "address": "34 Burrows St., Oshawa",
+      "phoneNumber": "647-2345-5432",
+      "website": "https://www.revivebusiness.org",
+      "imgUrl": "images/revive.webp",
+      "membershipLevel": "gold"
+    }
+  ]
+}

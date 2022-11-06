@@ -72,6 +72,10 @@
     width: 50%;
   }
 
+  .list section {
+    flex-direction: row;
+  }
+
   .footerContent1Container {
     flex-direction: row;
   }
