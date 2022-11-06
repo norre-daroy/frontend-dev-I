@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap");
-@import "variables.css";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+@import 'variables.css';
 
 header {
   align-items: center;
@@ -35,7 +35,7 @@ body {
 }
 
 li {
-  background: url("../images/bug.png") no-repeat left center;
+  background: url('../images/bug.png') no-repeat left center;
   background-size: 20px;
   list-style: none;
   padding: 7px 0 7px 25px;
