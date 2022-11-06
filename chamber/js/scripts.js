@@ -157,7 +157,7 @@ const gridbutton = document.querySelector('#grid');
 const listbutton = document.querySelector('#list');
 const display = document.querySelector('#business');
 
-if (gridButton) {
+if (gridbutton) {
   gridbutton.addEventListener('click', () => {
     // example using arrow function
     if (display) {
@@ -167,7 +167,7 @@ if (gridButton) {
   });
 }
 
-if (listButton) listbutton.addEventListener('click', showList);
+if (listbutton) listbutton.addEventListener('click', showList);
 
 function showList() {
   if (display) {
