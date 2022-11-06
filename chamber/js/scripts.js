@@ -113,15 +113,10 @@ const cards = document.querySelector('.cards');
 fetch('./data/data.json')
   .then((response) => response.json())
   .then(function (jsonObject) {
-    console.log(jsonObject); // temporary checking for valid response and data parsing
+    console.table(jsonObject); // temporary checking for valid response and data parsing
     const directory = jsonObject['directory'];
     directory.forEach((dir) => displayDirectory(dir));
   });
-
-// Function to add ordinal suffix to numbers
-function nth(n) {
-  return ['st', 'nd', 'rd'][((((n + 90) % 100) - 10) % 10) - 1] || 'th';
-}
 
 function displayDirectory(dir) {
   // Create elements to add to the document
@@ -154,22 +149,29 @@ function displayDirectory(dir) {
   card.appendChild(website);
 
   // Add/append the existing HTML div with the cards class with the section(card)
-  document.querySelector('div.grid').appendChild(card);
+  const divGrid = document.querySelector('div.grid');
+  if (divGrid) divGrid.appendChild(card);
 }
 
 const gridbutton = document.querySelector('#grid');
 const listbutton = document.querySelector('#list');
 const display = document.querySelector('#business');
 
-gridbutton.addEventListener('click', () => {
-  // example using arrow function
-  display.classList.add('grid');
-  display.classList.remove('list');
-});
+if (gridButton) {
+  gridbutton.addEventListener('click', () => {
+    // example using arrow function
+    if (display) {
+      display.classList.add('grid');
+      display.classList.remove('list');
+    }
+  });
+}
 
-listbutton.addEventListener('click', showList); // example using defined function
+if (listButton) listbutton.addEventListener('click', showList);
 
 function showList() {
-  display.classList.add('list');
-  display.classList.remove('grid');
+  if (display) {
+    display.classList.add('list');
+    display.classList.remove('grid');
+  }
 }
