@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poor+Story&display=swap');
+
+h1 {
+  border-bottom: #243b4a;
+  color: #dbd3d8;
+  font-family: 'Poor story', serif;
+  font-size: 3rem;
+}
+
+body {
+  background-color: #243b4a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+}
+
+main {
+  background: #dbd3d8;
+  border: 0.75em solid #d8b4a0;
+  box-shadow: 0 1.5em 2.5em -0.5em;
+  padding: 2em;
+  text-align: left;
+}
+
+figcaption {
+  text-transform: capitalize;
+}
