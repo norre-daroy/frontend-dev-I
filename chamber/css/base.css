@@ -456,6 +456,24 @@ small {
   display: none;
 }
 
+/* WEATHER */
+#weather-icon {
+  width: 200px;
+}
+
+.weather figure {
+  background-color: rgb(253, 246, 237);
+  border: 0.75em solid #d8b4a0;
+  box-shadow: 0 1.5em 2.5em -0.5em;
+  width: 220px;
+}
+
+.weather figcaption {
+  padding: 10px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
 /* FOOTER */
 footer {
   background-color: var(--primary-color);
