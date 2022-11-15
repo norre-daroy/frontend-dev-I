@@ -329,6 +329,16 @@ picture img {
   justify-content: space-around;
 }
 
+.membership h2 {
+  text-align: center;
+}
+
+.membership ul li {
+  list-style-type: none;
+  margin-top: 10px;
+  text-align: left;
+}
+
 #joinUs {
   align-self: center;
   background-color: var(--primary-color);
