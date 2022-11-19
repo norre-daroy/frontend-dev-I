@@ -339,7 +339,8 @@ picture img {
   text-align: left;
 }
 
-#joinUs {
+#joinUs,
+#contact {
   align-self: center;
   background-color: var(--primary-color);
   padding: 2em;
@@ -376,6 +377,21 @@ small {
   text-align: center;
   text-transform: uppercase;
   width: 100%;
+}
+
+/* CONTACT */
+#contact {
+  background-color: var(--secondary-color);
+  width: 100%;
+}
+
+.contactContainer {
+  color: #213819;
+  display: flex;
+}
+
+.submitContact {
+  background-color: var(--primary-color);
 }
 
 /* THANK YOU  */
