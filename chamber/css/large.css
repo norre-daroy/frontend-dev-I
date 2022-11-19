@@ -46,7 +46,9 @@
   }
 
   .hero h2 {
+    background-color: transparent;
     font-size: 4rem;
+    padding: 0;
   }
 
   .event {
