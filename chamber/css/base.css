@@ -200,7 +200,7 @@ button {
 .spotlightContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   padding: 1em;
 }
 
@@ -325,10 +325,12 @@ picture img {
   justify-content: center;
 }
 
-.joinContainer div {
+.joinContainer div,
+.discoverContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  width: 80%;
 }
 
 .membership h2 {
