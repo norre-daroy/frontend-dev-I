@@ -1,0 +1,232 @@
+const currentDate = new Intl.DateTimeFormat('en-UK', {
+  dateStyle: 'full',
+}).format(new Date());
+
+// Locally store date of last visit
+window.localStorage.setItem('lastVisit', currentDate);
+
+// Retrieve last visit date from local storage
+const lastVisitDate = localStorage.getItem('lastVisit');
+
+const date1 = new Date();
+const date2 = new Date(lastVisitDate);
+
+// Calculate days between last visit
+const days = (date1, date2) => {
+  let difference = date1.getTime() - date2.getTime();
+  let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
+  return TotalDays;
+};
+
+const daysLastVisitText = () => {
+  const dayDiff = days(date1, date2);
+  return `${dayDiff} ${dayDiff > 1 ? 'days' : 'day'}`;
+};
+
+const displayLastVisit = daysLastVisitText();
+
+const lastVisitSelector = document.querySelector('#lastVisit');
+if (lastVisitSelector) lastVisitSelector.innerHTML = displayLastVisit;
+
+const currentDateSelector = document.querySelector('#currentDate');
+if (currentDateSelector) currentDateSelector.innerHTML = currentDate;
+
+// Hamburger button toggle menu
+function toggleMenu() {
+  const primaryNavElement = document.getElementById('primaryNav');
+  if (primaryNavElement) primaryNavElement.classList.toggle('open');
+
+  const hamburgerBtnElement = document.getElementById('hamburgerBtn');
+  if (hamburgerBtnElement) hamburgerBtnElement.classList.toggle('open');
+}
+
+const menuButton = document.getElementById('hamburgerBtn');
+if (menuButton) menuButton.onclick = toggleMenu;
+
+const joinElement = document.getElementById('join');
+if (joinElement) {
+  joinElement.onclick = function () {
+    location.href = 'https://norre-daroy.github.io/wdd230/chamber/join.html';
+  };
+}
+
+//Value of hidden input
+const inputDateTimeSelector = document.getElementById('dateTime');
+if (inputDateTimeSelector) inputDateTimeSelector.value = new Date();
+
+//Date
+const currDate = new Date();
+dayOfWeek = currDate.getDay();
+
+if (dayOfWeek === 1 || dayOfWeek === 2) {
+  const banner = document.createElement('p');
+  banner.id = 'banner';
+  banner.innerHTML =
+    '🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00p.m.';
+  document.getElementById('bannerContainer').append(banner);
+}
+
+// Last modified
+const dateTimeLastModified = `Last modification: ${document.lastModified}`;
+const year = new Date(document.lastModified).getFullYear();
+
+const yearSelector = document.querySelector('#year');
+if (yearSelector) yearSelector.innerHTML = year;
+
+const dateSelector = document.querySelector('#date');
+if (dateSelector) dateSelector.innerHTML = dateTimeLastModified;
+
+// Lazy loading images
+const imagesToLoad = document.querySelectorAll('img[data-src]');
+
+const loadImages = (image) => {
+  image.setAttribute('src', image.getAttribute('data-src'));
+  image.onload = () => {
+    image.removeAttribute('data-src');
+  };
+};
+
+const imgOptions = {
+  threshold: 0.5,
+  rootMargin: '0px 0px 50px 0px',
+};
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(
+    (items, observer) =>
+      items.forEach((item) => {
+        if (item.isIntersecting) {
+          loadImages(item.target);
+          observer.unobserve(item.target);
+        }
+      }),
+    imgOptions
+  );
+  imagesToLoad.forEach((img) => observer.observe(img));
+} else {
+  imagesToLoad.forEach((img) => loadImages(img));
+}
+
+// DIRECTORY
+const cards = document.querySelector('.cards');
+const getBusinessList = async () => {
+  let coastal = [];
+  await fetch('./data/coastal.json')
+    .then((res) => res.json())
+    .then((data) =>
+      data.directory.forEach((coastal) => {
+        displayCoastal(coastal);
+        // coastal.push(coastal);
+      })
+    );
+
+  // Selects 3 random business with gold/silver status
+  const randomSpotlight = getMultipleRandom(
+    coastal.filter(
+      (business) =>
+        business.membershipLevel === 'gold' ||
+        business.membershipLevel === 'silver'
+    ),
+    3
+  );
+
+  randomSpotlight.forEach((a) => displaySpotlight(a));
+};
+
+getBusinessList();
+
+function getMultipleRandom(arr, num) {
+  const shuffled = [...arr].sort(() => 0.5 - Math.random());
+
+  return shuffled.slice(0, num);
+}
+
+function displayCoastal(coastal) {
+  // Create elements to add to the document
+  let card = document.createElement('section');
+  let div1 = document.createElement('div');
+  let div2 = document.createElement('div');
+  let image = document.createElement('img');
+  let name = document.createElement('h3');
+  let description = document.createElement('p');
+  let credit = document.createElement('p');
+
+  // Change the textContent property of the h2 element to contain the prophet's full name
+  if (name) name.textContent = coastal.name;
+  if (description) description.textContent = `${coastal.description}`;
+  if (credit) credit.textContent = `${coastal.imgCredits}`;
+
+  // Build the image attributes by using the setAttribute method for the src, alt, and loading attribute values. (Fill in the blank with the appropriate variable).
+  image.setAttribute('src', coastal.imgUrl);
+  image.setAttribute('alt', `${coastal.name}`);
+  image.setAttribute('loading', 'lazy');
+
+  // Add/append the section(card) with the h2 element
+  div1.appendChild(image);
+  // div1.appendChild(credit);
+  div2.appendChild(name);
+  div2.appendChild(description);
+
+  card.appendChild(div1);
+  card.appendChild(div2);
+
+  // Add/append the existing HTML div with the cards class with the section(card)
+  const divGrid = document.querySelector('#coastal');
+  if (divGrid) divGrid.appendChild(card);
+}
+
+const display = document.querySelector('#coastal');
+
+if (gridbutton) {
+  gridbutton.addEventListener('click', () => {
+    if (display) {
+      display.classList.add('grid');
+      display.classList.remove('list');
+    }
+  });
+}
+
+if (listbutton) listbutton.addEventListener('click', showList);
+
+function showList() {
+  if (display) {
+    display.classList.add('list');
+    display.classList.remove('grid');
+  }
+}
+
+// Displays business spotlight
+function displaySpotlight(dir) {
+  // Create elements to add to the document
+  let card = document.createElement('div');
+  let image = document.createElement('img');
+  let h4 = document.createElement('h4');
+  let address = document.createElement('p');
+  let phoneNumber = document.createElement('p');
+  let website = document.createElement('a');
+
+  // Change the textContent property of the h2 element to contain the prophet's full name
+  if (h4) h4.textContent = dir.name;
+  if (address) address.textContent = `Address: ${dir.address}`;
+  if (phoneNumber) phoneNumber.textContent = `Contact: ${dir.phoneNumber}`;
+  if (website) {
+    website.textContent = dir.website;
+    website.href = dir.website;
+  }
+
+  // Build the image attributes by using the setAttribute method for the src, alt, and loading attribute values. (Fill in the blank with the appropriate variable).
+  image.setAttribute('src', dir.imgUrl);
+  image.setAttribute('alt', `${dir.name}`);
+  image.setAttribute('loading', 'lazy');
+
+  // Add/append the section(card) with the h2 element
+  card.appendChild(h4);
+  card.appendChild(image);
+  card.appendChild(address);
+  card.appendChild(phoneNumber);
+  card.appendChild(website);
+
+  // Add/append the existing HTML div with the cards class with the section(card)
+  const divGrid = document.querySelector('.spotlightContainer');
+  if (divGrid) divGrid.appendChild(card);
+}

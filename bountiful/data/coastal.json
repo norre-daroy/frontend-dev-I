@@ -1,0 +1,52 @@
+{
+  "directory": [
+    {
+      "name": "Carmel-by-the-Sea",
+      "description": "Set along a white sandy beach, this small European-style village has fairy-tale cottages and fun things.",
+      "imgUrl": "images/carmel-by-the-sea.webp",
+      "imgCredits": "Photo by mana5280 on Unsplash"
+    },
+    {
+      "name": "San Clemente",
+      "description": "Cozy beach town on the southern coast, about midway between Los Angeles and San Diego.",
+      "imgUrl": "images/san-clemente.webp",
+      "imgCredits": " Photo by Bobby Stevenson on Unsplash"
+    },
+    {
+      "name": "Dana Point",
+      "description": "Seaside oasis just north of San Clemente, home to the breathtaking Salt Creek Beach.",
+      "imgUrl": "images/dana-point.webp",
+      "imgCredits": " Photo by James Lee on on Unsplash"
+    },
+    {
+      "name": "San Simeon",
+      "description": "Famous for being the home of this elegant hilltop mansion.",
+      "imgUrl": "images/san-simeon.webp",
+      "imgCredits": " Photo by Emily Karakis on on Unsplash"
+    },
+    {
+      "name": "Bodega Bay",
+      "description": "A quaint fishing village on the Sonoma Coast, Bodega Bay has both places to explore and places to relax.",
+      "imgUrl": "images/bodega-bay.webp",
+      "imgCredits": " Photo by Adam Dillon on Unsplash"
+    },
+    {
+      "name": "Monterey",
+      "description": "By the waterfront, local hot spot with gift shops all set inside of converted old sardine-canning factories.",
+      "imgUrl": "images/monterey.webp",
+      "imgCredits": " Photo by mana5280 on Unsplash"
+    },
+    {
+      "name": "Mendocino",
+      "description": "On the northern coast, Mendocino was first established back in the 1850s.",
+      "imgUrl": "images/mendocino.webp",
+      "imgCredits": " Photo by Simon Hurry on Unsplash"
+    },
+    {
+      "name": "Encinitas",
+      "description": "North of San Diego, Encinitas is a fun surfing town with lots of fabulous restaurants, shops, and local accommodations. ",
+      "imgUrl": "images/encinitas.webp",
+      "imgCredits": " Photo by Carlos Bastias on Unsplash"
+    }
+  ]
+}

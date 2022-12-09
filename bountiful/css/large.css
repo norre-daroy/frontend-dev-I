@@ -1,0 +1,71 @@
+@media only screen and (min-width: 64rem) {
+  .logoContainer img {
+    width: 80px;
+  }
+
+  .headings h1 {
+    font-size: 2.4rem;
+  }
+
+  .headings h2 {
+    font-size: 2rem;
+  }
+
+  .menuContainer {
+    flex-flow: row-reverse;
+    justify-content: space-around;
+  }
+
+  nav button {
+    display: none;
+  }
+
+  #banner {
+    font-size: larger;
+    padding: 1em 2em;
+  }
+
+  #primaryNav {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    position: inherit;
+  }
+
+  #primaryNav li a {
+    margin: 0 1em;
+  }
+
+  main {
+    padding: 3em;
+  }
+
+  .business {
+    grid-area: 1 / 3 / 1 / 3;
+  }
+
+  .weather {
+    grid-area: 2/ 3/ 2 / 3;
+  }
+
+  .coastalContainer {
+    grid-area: 1 / 1 / span 2 / span 2;
+  }
+
+  .makeDrink {
+    grid-area: 3 / 1 / 3 / 1;
+  }
+
+  .drinks {
+    grid-column: span 2;
+  }
+
+  .coastalContainer div img {
+    box-shadow: 0 0 30px#716f6a;
+    width: 100px;
+  }
+
+  .footerContent1Container {
+    margin: 0 2em;
+  }
+}

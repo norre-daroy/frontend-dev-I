@@ -1,0 +1,83 @@
+@media only screen and (min-width: 37.5rem) {
+  .logoContainer img {
+    width: 120px;
+  }
+
+  .headings h1 {
+    font-size: 2.2rem;
+  }
+
+  .headings h2 {
+    font-size: 1.9rem;
+  }
+
+  #primaryNav {
+    top: auto;
+    right: 0;
+  }
+
+  .social {
+    margin: 0 3em;
+  }
+
+  .social a {
+    padding: 0 0.5em;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .weather {
+    grid-area: 1 / 1 / 1 / span 2;
+  }
+
+  .coastalContainer {
+    grid-area: 2 / 1 / 2 / span 3;
+  }
+
+  .makeDrink {
+    grid-area: 3 / 1 / 3 / span 3;
+  }
+
+  .drinks {
+    grid-column: span 3;
+  }
+
+  .coastalContainer div section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footerContent1Container {
+    flex-direction: row;
+  }
+
+  .footerContent {
+    flex-direction: row;
+  }
+
+  .footerContent h3 {
+    text-align: left;
+  }
+
+  .footerContent p {
+    text-align: left;
+  }
+
+  .footerContent2Container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footerContent2Container p {
+    border-right: 2px solid var(--secondary-color);
+    padding: 0 1em;
+  }
+
+  #date {
+    border: none;
+  }
+}

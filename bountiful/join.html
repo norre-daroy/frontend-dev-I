@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Oshawa Chamber</title>
+    <meta
+      name="description"
+      content="Chamber of commerce site for the city of Oshawa"
+    />
+    <meta name="keywords" content="Chamber, commerce, Oshawa, business" />
+    <meta name="author" content="Norre Daroy" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/medium.css" />
+    <link rel="stylesheet" href="css/large.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="headingContainer">
+        <div class="logoContainer">
+          <img
+            src="images/oshawa-chamber-logo.webp"
+            alt="logo for oshawa chamber of commerce"
+          />
+
+          <div class="headings">
+            <h1>Oshawa</h1>
+            <h2>Chamber of Commerce</h2>
+          </div>
+        </div>
+        <div class="menuContainer">
+          <div class="social">
+            <a href="https://www.facebook.com" target="_blank"
+              ><img src="images/icon-facebook.svg" alt="facebook logo"
+            /></a>
+            <a href="https://www.linkedin.com" target="_blank"
+              ><img src="images/icon-linkedin.svg" alt="linkedin logo"
+            /></a>
+          </div>
+          <nav>
+            <button id="hamburgerBtn">
+              <span>&#9776;</span><span>X</span>
+            </button>
+            <ul id="primaryNav">
+              <li>
+                <a
+                  href="https://norre-daroy.github.io/wdd230/chamber/discover.html"
+                >
+                  Discover
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://norre-daroy.github.io/wdd230/chamber/directory.html"
+                >
+                  Directory
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://norre-daroy.github.io/wdd230/chamber/join.html"
+                >
+                  Join
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://norre-daroy.github.io/wdd230/chamber/contact.html"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id="bannerContainer"></div>
+      <div id="currentDate"></div>
+    </header>
+
+    <main class="joinContainer">
+      <h1>Sign up to join</h1>
+      <div>
+        <div class="membership">
+          <ul>
+            <h2>Membership Levels</h2>
+            <li>
+              <h3>NP Membership</h3>
+              <p>
+                As a NP member, you are a non profit organization. Support will
+                be provided for any events you plan to organize. There will be
+                no fee collected for being a NP member.
+              </p>
+            </li>
+            <li>
+              <h3>Bronze Membership</h3>
+              <p>
+                As a Bronze member, you'll get 10% discount for city monthly
+                trainings and 5% on advertising materials. This will also give
+                you 1 free entry to an event each month and support provided for
+                any events you will organize. <br /><br />An annual fee of $220
+                will be collected for being a bronze member.
+              </p>
+            </li>
+            <li>
+              <h3>Silver Membership</h3>
+              <p>
+                As a Silver member, you'll get 20% discount for city monthly
+                trainings and 15% on advertising materials. This will also give
+                you 2 free entry to an event each month and support provided for
+                any events you will organize. This will also promote your
+                business in home page highlights for 2 weeks each month.
+                Benefits also extends to your employees to get 15% off staying
+                at any city choice hotels.
+                <br /><br />An annual fee of $380 will be collected for being a
+                silver member.
+              </p>
+            </li>
+            <li>
+              <h3>Gold Membership</h3>
+              <p>
+                As a Gold member, you'll get 40% discount for city monthly
+                trainings and 35% on advertising materials. This will also give
+                you unlimited free entry to an event each month and support
+                provided for any events you will organize. <br /><br />This will
+                also promote your business in home page highlights for the
+                duration of being a gold member. Benefits also extends to your
+                employees to get 25% off staying at any city choice hotels. You
+                will also enjoy priority pass membership for any conferences
+                held by the city.<br /><br />An annual fee of $750 will be
+                collected for being a gold member.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <form
+          id="joinUs"
+          name="joinUs"
+          action="https://norre-daroy.github.io/wdd230/chamber/thankyou.html"
+          method="get"
+        >
+          <label for="fname">First name</label><br />
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            autofocus
+            required
+          /><br /><br />
+          <label for="lname">Last name:</label><br />
+          <input type="text" id="lname" name="lname" required /><br /><br />
+
+          <label for="busname">Business position title</label><br />
+          <input
+            type="text"
+            id="busname"
+            name="busname"
+            pattern="[a-zA-Z -]{7,}"
+          /><small
+            >Accepts only alpha characters, hyphens, with at least 7
+            characters.</small
+          ><br /><br />
+
+          <label for="email">Email</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+          /><br /><br />
+
+          <label for="phone">Phone number:</label>
+          <input type="tel" id="phone" name="phone" required /><br /><br />
+
+          <label for="bustitle">Business name:</label>
+          <input
+            type="tel"
+            id="bustitle"
+            name="bustitle"
+            required
+          /><br /><br />
+
+          <label for="membership">Choose membership level:</label>
+          <select name="membership" id="membership">
+            <option value="" disabled selected>Select your option</option>
+            <option value="np">NP Membership</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option></select
+          ><br /><br />
+
+          <label for="busdesc">Business Description:</label>
+          <textarea
+            id="busdesc"
+            name="busdesc"
+            rows="4"
+            placeholder="Type your description here"
+          ></textarea
+          ><br /><br />
+          <input type="hidden" id="dateTime" name="dateTime" value="" />
+          <input class="submit" type="submit" value="Submit" />
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footerContent1Container">
+        <div class="footerContent">
+          <img
+            src="images/oshawa-chamber-logo.webp"
+            alt="logo for oshawa chamber of commerce"
+          />
+          <div>
+            <h3>Oshawa Chamber of Commerce</h3>
+            <p>17 Ontario St. Oshawa, Canada</p>
+          </div>
+        </div>
+        <div>
+          <p>theoshawachamber.org</p>
+          <p>+1 (905) 345-1200</p>
+        </div>
+      </div>
+      <div class="footerContent2Container">
+        <p>&copy; <span id="year"></span> Oshawa Chamber</p>
+        <p>Norre Daroy</p>
+        <p>WDD 230 Project</p>
+        <p id="date"></p>
+      </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

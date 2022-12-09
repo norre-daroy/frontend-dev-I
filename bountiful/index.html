@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bountiful Foods</title>
+    <meta
+      name="description"
+      content="Bountiful Foods provides local fresh healthy fruits and options"
+    />
+    <meta name="keywords" content="Bountiful Food, fresh, local fruits" />
+    <meta name="author" content="Norre Daroy" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/medium.css" />
+    <link rel="stylesheet" href="css/large.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="headingContainer">
+        <div class="logoContainer">
+          <img
+            src="images/bountiful-logo-2.webp"
+            alt="logo for bountiful foods"
+          />
+          <div class="headings">
+            <h1>Bountiful</h1>
+            <h2>Foods</h2>
+          </div>
+        </div>
+        <div class="menuContainer">
+          <div class="social">
+            <a href="https://www.facebook.com" target="_blank"
+              ><img src="images/icon-facebook.svg" alt="facebook logo"
+            /></a>
+            <a href="https://www.linkedin.com" target="_blank"
+              ><img src="images/icon-linkedin.svg" alt="linkedin logo"
+            /></a>
+            <a href="https://www.twitter.com" target="_blank"
+              ><img src="images/icon-twitter.svg" alt="twitter logo"
+            /></a>
+          </div>
+          <nav>
+            <button id="hamburgerBtn">
+              <span>&#9776;</span><span>X</span>
+            </button>
+            <ul id="primaryNav">
+              <li>
+                <a
+                  href="https://norre-daroy.github.io/wdd230/chamber/discover.html"
+                >
+                  Fresh
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://norre-daroy.github.io/wdd230/chamber/directory.html"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://norre-daroy.github.io/wdd230/chamber/join.html"
+                >
+                  Resource
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="banner">
+        <h3>Directly from nature, fresh and organic</h3>
+      </div>
+    </header>
+
+    <main class="home">
+      <div id="business">
+        <h2>Business Information</h2>
+        <p>7119 Tanager Drive, Carlsbad, CA 92011</p>
+        <p>(760) 707-9353</p>
+        <p>Monday - Saturday | 7:30am - 9:00pm</p>
+        <a>bountifulfoods.com</a>
+        <p>Delivery | Pickup | Food Trucks Serving Coastal Areas</p>
+      </div>
+      <div class="weather">
+        <h2>Weather</h2>
+        <p>Temperature: <span id="temp"></span>F</p>
+        <p>Feels like: <span id="feels-temp"></span>F</p>
+        <figure>
+          <img src="#" alt="" id="weather-icon" />
+          <figcaption></figcaption>
+        </figure>
+        <p>Humidity: <span id="humidity"></span>mph</p>
+        <p>Wind Speed: <span id="windSpeed"></span>mph</p>
+        <p>Wind Chill: <span id="windChill"></span></p>
+        <p>
+          Get Carlsbad, CA local hourly forecast including temperature,
+          RealFeel, and chance of precipitation. Everything you need to be ready
+          to step outside prepared.
+        </p>
+      </div>
+      <div class="coastalContainer">
+        <h2>Coastal Areas Information</h2>
+        <div id="coastal"></div>
+      </div>
+      <div class="makeDrink">
+        <h2>Make your own fresh drink</h2>
+        <button>Start mixing</button>
+      </div>
+      <div class="drinks">
+        <h2>Your specialty drinks</h2>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footerContent1Container">
+        <div class="footerContent">
+          <img
+            src="images/bountiful-logo.webp"
+            alt="logo for oshawa chamber of commerce"
+          />
+          <div>
+            <h3>Oshawa Chamber of Commerce</h3>
+            <p>17 Ontario St. Oshawa, Canada</p>
+          </div>
+        </div>
+        <div>
+          <p>theoshawachamber.org</p>
+          <p>+1 (905) 345-1200</p>
+        </div>
+      </div>
+      <div class="footerContent2Container">
+        <p>&copy; <span id="year"></span> Oshawa Chamber</p>
+        <p>Norre Daroy</p>
+        <p>WDD 230 Project</p>
+        <p id="date"></p>
+      </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/windchill.js"></script>
+  </body>
+</html>
