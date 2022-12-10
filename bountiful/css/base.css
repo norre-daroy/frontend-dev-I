@@ -85,6 +85,7 @@ header {
 }
 
 #primaryNav li {
+  color: var(--background-color);
   margin: 1em 0.5em;
   text-transform: uppercase;
   transition: all 0.3s linear;
@@ -113,7 +114,7 @@ header {
 }
 
 #primaryNav.open {
-  background-color: #f0c987;
+  background-color: var(--secondary-color);
   display: block;
   z-index: 99;
 }
@@ -273,7 +274,7 @@ button {
 /* FOOTER */
 footer {
   background-color: var(--primary-color);
-  color: var(--accent-color);
+  color: var(--background-color);
   padding: 0.5em;
   text-align: center;
 }
