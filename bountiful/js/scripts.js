@@ -307,5 +307,6 @@ function displayHomeFruits() {
   div2.appendChild(selectFruits);
   div2.appendChild(instructions);
 
+  // I'm facing some race condition where fetch data has not yet been save to "fruits" and I can't use find to filter details for carbs, protein, fat, sugar.
   const fruitDetails = fruits.find((fruit) => fruit.name === selectedFruit1);
 }
