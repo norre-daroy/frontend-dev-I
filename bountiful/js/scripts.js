@@ -54,18 +54,6 @@ if (joinElement) {
 const inputDateTimeSelector = document.getElementById('dateTime');
 if (inputDateTimeSelector) inputDateTimeSelector.value = new Date();
 
-//Date
-const currDate = new Date();
-dayOfWeek = currDate.getDay();
-
-if (dayOfWeek === 1 || dayOfWeek === 2) {
-  const banner = document.createElement('p');
-  banner.id = 'banner';
-  banner.innerHTML =
-    '🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00p.m.';
-  document.getElementById('bannerContainer').append(banner);
-}
-
 // Last modified
 const dateTimeLastModified = `Last modification: ${document.lastModified}`;
 const year = new Date(document.lastModified).getFullYear();
@@ -109,14 +97,13 @@ if ('IntersectionObserver' in window) {
 
 // DIRECTORY
 const cards = document.querySelector('.cards');
-const getBusinessList = async () => {
+const getCoastalList = async () => {
   let coastal = [];
   await fetch('./data/coastal.json')
     .then((res) => res.json())
     .then((data) =>
       data.directory.forEach((coastal) => {
         displayCoastal(coastal);
-        // coastal.push(coastal);
       })
     );
 
@@ -133,7 +120,7 @@ const getBusinessList = async () => {
   randomSpotlight.forEach((a) => displaySpotlight(a));
 };
 
-getBusinessList();
+getCoastalList();
 
 function getMultipleRandom(arr, num) {
   const shuffled = [...arr].sort(() => 0.5 - Math.random());
@@ -177,56 +164,102 @@ function displayCoastal(coastal) {
 
 const display = document.querySelector('#coastal');
 
-if (gridbutton) {
-  gridbutton.addEventListener('click', () => {
-    if (display) {
-      display.classList.add('grid');
-      display.classList.remove('list');
-    }
-  });
-}
+// Get fruits
+const fruits = [];
+const selectFruits = async (id) => {
+  let fruitOptions = document.getElementById(id);
+  fruitOptions.length = 0;
 
-if (listbutton) listbutton.addEventListener('click', showList);
+  let defaultOption = document.createElement('option');
+  defaultOption.text = 'Select fruit';
 
-function showList() {
-  if (display) {
-    display.classList.add('list');
-    display.classList.remove('grid');
-  }
-}
+  fruitOptions.add(defaultOption);
+  fruitOptions.selectedIndex = 0;
 
-// Displays business spotlight
-function displaySpotlight(dir) {
-  // Create elements to add to the document
-  let card = document.createElement('div');
-  let image = document.createElement('img');
-  let h4 = document.createElement('h4');
-  let address = document.createElement('p');
-  let phoneNumber = document.createElement('p');
-  let website = document.createElement('a');
+  const url = 'https://brotherblazzard.github.io/canvas-content/fruit.json';
+
+  await fetch(url)
+    .then(function (response) {
+      if (response.status !== 200) {
+        console.warn(
+          'Looks like there was a problem. Status Code: ' + response.status
+        );
+        return;
+      }
+
+      // Examine the text in the response
+      response.json().then(function (data) {
+        let option;
+        data.map((d) => fruits.push(d));
+
+        for (let i = 0; i < data.length; i++) {
+          option = document.createElement('option');
+          option.text = data[i].name;
+          option.value = data[i].name;
+          fruitOptions.add(option);
+        }
+      });
+    })
+    .catch(function (err) {
+      console.error('Fetch Error -', err);
+    });
+};
+
+function getFruitDetails() {
+  const inputDate = localStorage.getItem('dateTime');
+  const inputFirstname = localStorage.getItem('fname');
+  const inputEmail = localStorage.getItem('email');
+  const inputPhone = localStorage.getItem('phone');
+  const selectedFruit1 = localStorage.getItem('fruits1');
+  const selectedFruit2 = localStorage.getItem('fruits2');
+  const selectedFruit3 = localStorage.getItem('fruits3');
+
+  let orderDate = document.createElement('p');
+  let firstName = document.createElement('p');
+  let email = document.createElement('p');
+  let phone = document.createElement('p');
+  let selectFruits = document.createElement('p');
 
   // Change the textContent property of the h2 element to contain the prophet's full name
-  if (h4) h4.textContent = dir.name;
-  if (address) address.textContent = `Address: ${dir.address}`;
-  if (phoneNumber) phoneNumber.textContent = `Contact: ${dir.phoneNumber}`;
-  if (website) {
-    website.textContent = dir.website;
-    website.href = dir.website;
+  const inputDateFormatted = new Intl.DateTimeFormat('en-UK', {
+    dateStyle: 'full',
+  }).format(new Date(inputDate));
+
+  if (orderDate) orderDate.textContent = `Order date: ${inputDateFormatted}`;
+  if (firstName) firstName.textContent = `Firstname: ${inputFirstname}`;
+  if (email) email.textContent = `Email: ${inputEmail}`;
+  if (phone) phone.textContent = `Phone: ${inputPhone}`;
+  if (selectFruits)
+    selectFruits.textContent = `Fruit: ${selectedFruit1}, ${selectedFruit2}, ${selectedFruit3}`;
+
+  const div = document.querySelector('#freshDrinks');
+  div.appendChild(orderDate);
+  div.appendChild(firstName);
+  div.appendChild(email);
+  div.appendChild(phone);
+  div.appendChild(selectFruits);
+
+  console.log(selectedFruit1);
+
+  fruits.forEach((fruit) => {
+    fruit.name === selectedFruit1;
+  });
+  // console.log(fruitDetails);
+}
+
+selectFruits('fruits1');
+selectFruits('fruits2');
+selectFruits('fruits3');
+
+const form = document.querySelector('#fresh');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
+
+  for (const pair of formData.entries()) {
+    localStorage.setItem(pair[0], pair[1]);
   }
 
-  // Build the image attributes by using the setAttribute method for the src, alt, and loading attribute values. (Fill in the blank with the appropriate variable).
-  image.setAttribute('src', dir.imgUrl);
-  image.setAttribute('alt', `${dir.name}`);
-  image.setAttribute('loading', 'lazy');
+});
 
-  // Add/append the section(card) with the h2 element
-  card.appendChild(h4);
-  card.appendChild(image);
-  card.appendChild(address);
-  card.appendChild(phoneNumber);
-  card.appendChild(website);
-
-  // Add/append the existing HTML div with the cards class with the section(card)
-  const divGrid = document.querySelector('.spotlightContainer');
-  if (divGrid) divGrid.appendChild(card);
-}
+getFruitDetails();

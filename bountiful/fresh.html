@@ -64,7 +64,6 @@
                   About
                 </a>
               </li>
-            
             </ul>
           </nav>
         </div>
@@ -74,49 +73,56 @@
       </div>
     </header>
 
-    <main class="home">
-      <div id="business">
-        <h2>Business Information</h2>
-        <p>7119 Tanager Drive, Carlsbad, CA 92011</p>
-        <p>(760) 707-9353</p>
-        <p>Monday - Saturday | 7:30am - 9:00pm</p>
-        <a>bountifulfoods.com</a>
-        <p>Delivery | Pickup | Food Trucks Serving Coastal Areas</p>
-      </div>
-      <div class="weather">
-        <h2>Weather</h2>
-        <p>Temperature: <span id="temp"></span>F</p>
-        <p>Feels like: <span id="feels-temp"></span>F</p>
-        <figure>
-          <img src="#" alt="" id="weather-icon" />
-          <figcaption></figcaption>
-        </figure>
-        <p>Humidity: <span id="humidity"></span>mph</p>
-        <p>Wind Speed: <span id="windSpeed"></span>mph</p>
-        <p>Wind Chill: <span id="windChill"></span></p>
-        <p>
-          Get Carlsbad, CA local hourly forecast including temperature,
-          RealFeel, and chance of precipitation. Everything you need to be ready
-          to step outside prepared.
-        </p>
-      </div>
-      <div class="coastalContainer">
-        <h2>Coastal Areas Information</h2>
-        <div id="coastal"></div>
-      </div>
-      <div class="makeDrink">
-        <h2>Make your own fresh drink</h2>
-        <button>Start mixing</button>
-      </div>
-      <div class="drinks">
-        <h2>Your specialty drinks</h2>
+    <main class="freshContainer">
+      <div class="specialty">
+        <h1>Make your own specialty drinks</h1>
         <div id="freshDrinks"></div>
+      </div>
+      <div class="formContainer">
+        <form id="fresh" name="fresh" method="get">
+          <label for="fname">First name</label><br />
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            autofocus
+            required
+          /><br /><br />
+
+          <label for="email">Email</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+          /><br /><br />
+
+          <label for="phone">Phone number:</label>
+          <input type="tel" id="phone" name="phone" required /><br /><br />
+
+          <label for="fruits">Select fruits:</label>
+
+          <select name="fruits1" id="fruits1"></select>
+          <select name="fruits2" id="fruits2"></select>
+          <select name="fruits3" id="fruits3"></select>
+
+          <label for="instructions">Special Instructions:</label>
+          <textarea
+            id="instructions"
+            name="instructions"
+            rows="4"
+            placeholder="Type your description here"
+          ></textarea
+          ><br /><br />
+          <input type="hidden" id="dateTime" name="dateTime" value="" />
+          <input class="submit" type="submit" value="Submit" />
+        </form>
       </div>
     </main>
 
     <footer>
       <div class="footerContent1Container">
-      
       <div class="footerContent2Container">
         <p>&copy; <span id="year"></span> Bountiful Foods</p>
         <p>Norre Daroy</p>
@@ -124,8 +130,6 @@
         <p id="date"></p>
       </div>
     </footer>
-
     <script src="js/scripts.js"></script>
-    <script src="js/windchill.js"></script>
   </body>
 </html>

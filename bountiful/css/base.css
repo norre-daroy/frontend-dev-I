@@ -17,7 +17,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--background-color);
+  color: var(--primary-color);
   font-family: var(--heading-font);
 }
 
@@ -33,6 +33,11 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0.5em;
+}
+
+.headingContainer h1,
+.headingContainer h2 {
+  color: var(--background-color);
 }
 
 .logoContainer {
@@ -171,7 +176,6 @@ main {
 }
 
 .home div h2 {
-  color: var(--primary-color);
   text-transform: uppercase;
 }
 
@@ -233,6 +237,7 @@ button {
 }
 
 .coastalContainer div section h3 {
+  color: var(--background-color);
   line-height: 0.5;
   padding: 0;
 }
@@ -241,6 +246,28 @@ button {
   display: block;
   text-align: left;
   text-decoration: underline;
+}
+
+/* ABOUT */
+
+/* FRESH */
+.specialty h1 {
+  color: var(--primary-color);
+  margin: 0 2em;
+}
+
+.formContainer {
+  background-color: var(--accent1-color);
+  border: 0.55em dotted var(--secondary-color);
+  box-shadow: 0 1.5em 2em -0.5em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.formContainer h3 {
+  color: var(--background-color);
 }
 
 /* FOOTER */
