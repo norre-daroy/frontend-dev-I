@@ -43,10 +43,10 @@ function toggleMenu() {
 const menuButton = document.getElementById('hamburgerBtn');
 if (menuButton) menuButton.onclick = toggleMenu;
 
-const joinElement = document.getElementById('join');
-if (joinElement) {
-  joinElement.onclick = function () {
-    location.href = 'https://norre-daroy.github.io/wdd230/chamber/join.html';
+const startElement = document.getElementById('start');
+if (startElement) {
+  startElement.onclick = function () {
+    location.href = 'https://norre-daroy.github.io/wdd230/bountiful/fresh.html';
   };
 }
 
@@ -213,12 +213,14 @@ function getFruitDetails() {
   const selectedFruit1 = localStorage.getItem('fruits1');
   const selectedFruit2 = localStorage.getItem('fruits2');
   const selectedFruit3 = localStorage.getItem('fruits3');
+  const inputInstructions = localStorage.getItem('instructions');
 
-  let orderDate = document.createElement('p');
-  let firstName = document.createElement('p');
-  let email = document.createElement('p');
-  let phone = document.createElement('p');
-  let selectFruits = document.createElement('p');
+  let orderDate = document.getElementById('formDate');
+  let firstName = document.getElementById('formName');
+  let email = document.getElementById('formEmail');
+  let phone = document.getElementById('formPhone');
+  let selectFruits = document.getElementById('formFruit');
+  let instructions = document.getElementById('formInstructions');
 
   // Change the textContent property of the h2 element to contain the prophet's full name
   const inputDateFormatted = new Intl.DateTimeFormat('en-UK', {
@@ -231,6 +233,8 @@ function getFruitDetails() {
   if (phone) phone.textContent = `Phone: ${inputPhone}`;
   if (selectFruits)
     selectFruits.textContent = `Fruit: ${selectedFruit1}, ${selectedFruit2}, ${selectedFruit3}`;
+  if (instructions)
+    instructions.textContent = `Special instructions: ${inputInstructions}`;
 
   const div = document.querySelector('#freshDrinks');
   div.appendChild(orderDate);
@@ -238,6 +242,7 @@ function getFruitDetails() {
   div.appendChild(email);
   div.appendChild(phone);
   div.appendChild(selectFruits);
+  div.appendChild(instructions);
 
   console.log(selectedFruit1);
 
@@ -260,6 +265,47 @@ form.addEventListener('submit', (e) => {
     localStorage.setItem(pair[0], pair[1]);
   }
 
+  getFruitDetails();
 });
 
-getFruitDetails();
+function displayHomeFruits() {
+  const inputDate = localStorage.getItem('dateTime');
+  const inputFirstname = localStorage.getItem('fname');
+  const inputEmail = localStorage.getItem('email');
+  const inputPhone = localStorage.getItem('phone');
+  const selectedFruit1 = localStorage.getItem('fruits1');
+  const selectedFruit2 = localStorage.getItem('fruits2');
+  const selectedFruit3 = localStorage.getItem('fruits3');
+  const inputInstructions = localStorage.getItem('instructions');
+
+  let orderDate = document.getElementById('formDate');
+  let firstName = document.getElementById('formName');
+  let email = document.getElementById('formEmail');
+  let phone = document.getElementById('formPhone');
+  let selectFruits = document.getElementById('formFruit');
+  let instructions = document.getElementById('formInstructions');
+
+  // Change the textContent property of the h2 element to contain the prophet's full name
+  const inputDateFormatted = new Intl.DateTimeFormat('en-UK', {
+    dateStyle: 'full',
+  }).format(new Date(inputDate));
+
+  if (orderDate) orderDate.textContent = `Order date: ${inputDateFormatted}`;
+  if (firstName) firstName.textContent = `Firstname: ${inputFirstname}`;
+  if (email) email.textContent = `Email: ${inputEmail}`;
+  if (phone) phone.textContent = `Phone: ${inputPhone}`;
+  if (selectFruits)
+    selectFruits.textContent = `Fruit: ${selectedFruit1}, ${selectedFruit2}, ${selectedFruit3}`;
+  if (instructions)
+    instructions.textContent = `Special instructions: ${inputInstructions}`;
+
+  const div2 = document.querySelector('#freshDrinksHome');
+  div2.appendChild(orderDate);
+  div2.appendChild(firstName);
+  div2.appendChild(email);
+  div2.appendChild(phone);
+  div2.appendChild(selectFruits);
+  div2.appendChild(instructions);
+
+  const fruitDetails = fruits.find((fruit) => fruit.name === selectedFruit1);
+}

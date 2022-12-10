@@ -9,7 +9,7 @@ const captionDesc = document.querySelector('figcaption');
 const apiKey = '01279152f45084dd0b2b1b23e7bce8cb';
 const q = 'Carlsbad';
 const units = 'imperial';
-const url = `https://api.openweathermap.org/data/2.5/forecast?q=${q}&current=current&weather?units=${units}&appid=${apiKey}`;
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${q}&units=${units}&appid=${apiKey}`;
 
 async function apiFetch() {
   try {
